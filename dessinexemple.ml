@@ -41,10 +41,15 @@ crayon.visee <- 0.0;
 crayon.leve <- false;
 moveto (round crayon.x) (round crayon.y);;
 
+let rec motif n c =
+if n = 0 then avance c else
+	begin
+	motif (n-1) (c /. 3.0); tourne 60.0;
+	motif (n-1) (c /. 3.0); tourne (-120.0);
+	motif (n-1) (c /. 3.0); tourne 60.0;
+	motif (n-1) (c /. 3.0)
+	end;;
+let flocon n c = for i = 1 to 3 do motif n c; tourne (-120.0) done;;
 
 vide_ecran ();;
-
-(*
-type agent = {x: float; y : float; z :float};;
-
-let relation a = {x=10.*.(a.x-.a.y); y=(10.*.a.x)-.(a.x*.a.z)-.a.y; z=(a.x*.a.y)-.(8./.3.)*.a.z};;*)
+flocon 4 100.0;;
