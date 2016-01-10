@@ -1,0 +1,35 @@
+body {
+	background: #fff url(images-de-fond-web-13.jpg);
+	margin:0; 
+	padding:0;
+	color: white;
+}
+
+@font-face {
+	font-family: 'Learning Curve';
+	src : url(Polices/LearningCurve_OT.otf);
+}
+
+@font-face {
+	font-family: 'Windsong';
+	src : url(Polices/Windsong.ttf);
+}
+
+#header{
+	height: 100px;
+	width: 1000px;
+	font-size: 60px;
+	font-weight: bold;
+	margin-top: 30px;
+	font-family: "Learning Curve";
+	margin-left: 20px;
+}
+
+#introduction {
+	height: 200px;
+	width: 1400px;
+	font-size: 40px;
+	font-weight: normal;
+	font-family: Windsong;
+	margin-left: 20px;
+}
