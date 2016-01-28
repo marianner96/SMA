@@ -1,34 +1,35 @@
 body {
-	background: #A1B4CD;
 	margin:0; 
 	padding:0;
+	color:#65625B; 
+	background:#fff url(main2_bg.gif);
 }
 
-@font-face {
-	font-family: 'Learning Curve';
-	src : url(Polices/LearningCurve_OT.otf);
-}
-
-@font-face {
-	font-family: 'Windsong';
-	src : url(Polices/Windsong.ttf);
+img{
+	margin-top: 2%;
+	height: 100%;
+	width: 18%;
+	float: left;
 }
 
 #header{
 	height: 70px;
 	width: 900px;
-	font-size: 60px;
+	font-size: 20px;
 	font-weight: bold;
-	font-family: "Learning Curve";
-	border-style: solid;
-	border-color: white;
+	text-align: center;
+	color: #CD5C5C;
 }
 
 #introduction {
 	height: 200px;
-	width: 1400px;
-	font-size: 40px;
+	width: 1100px;
+	font-size: 16px;
 	font-weight: normal;
-	font-family: Windsong;
-	margin-left: 20px;
+	margin-left: 17%;
+}
+
+#introduction:first-letter {
+	font-style: italic;
+	font-size: 40px;
 }
