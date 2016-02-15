@@ -13,25 +13,12 @@ img{
 }
 
 #header{
-	height: 70px;
+	height: 120px;
 	width: 900px;
 	font-size: 20px;
 	font-weight: bold;
 	text-align: center;
 	color: #CD5C5C;
-}
-
-#introduction {
-	height: 200px;
-	width: 850px;
-	font-size: 16px;
-	font-weight: normal;
-	margin-left: 19%;
-}
-
-#introduction:first-letter {
-	font-style: italic;
-	font-size: 40px;
 }
 
 #menu {
@@ -42,4 +29,17 @@ img{
 	margin-top: 2.2%;
 	border-style: solid;
 	text-align: center;
+}
+
+#contenu {
+	height: 200px;
+	width: 850px;
+	font-size: 16px;
+	font-weight: normal;
+	margin-left: 19%;
+}
+
+#contenu:first-letter {
+	font-style: italic;
+	font-size: 40px;
 }
