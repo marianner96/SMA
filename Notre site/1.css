@@ -12,8 +12,12 @@ img{
 	float: left;
 }
 
+a {
+	color : #65625B;
+}
+
 #header{
-	height: 120px;
+	height: 100px;
 	width: 900px;
 	font-size: 20px;
 	font-weight: bold;
@@ -23,12 +27,16 @@ img{
 
 #menu {
 	float: right;
-	width : 200px;
+	width : 250px;
 	height: 400px;
 	background-color: beige;
 	margin-top: 2.2%;
 	border-style: solid;
 	text-align: center;
+}
+
+ul {
+	text-align: left;
 }
 
 #contenu {
