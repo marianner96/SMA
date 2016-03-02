@@ -50,3 +50,9 @@ ol {
 	font-weight: normal;
 	margin-left: 19%;
 }
+#pap {
+	width : 200px;
+	height : 200px;
+	float: right;
+	margin-right: 50px;
+}
