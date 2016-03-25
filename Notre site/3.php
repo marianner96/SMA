@@ -9,36 +9,24 @@
     <meta name="description"  content="paramètres de boutons" >
     <meta name="robots"  content="index,follow" >
     <meta name="Author" content="BLAIS Claire, RENTCHLER Marianne">
-    <link rel="stylesheet" type="text/css" href="sources.css">   
+    <link rel="stylesheet" type="text/css" href="site.css">   
     <title>La théorie du chaos</title>
   </head>
   <body>
     <img src="lorenz.jpg" alt="Une photo"></img>
-    <div id="menu">
-      Menu 
-      <ul>
-        <li>Partie explicative :</li>
-        <ol>
-        	<li>La théorie du chaos</li>
-        	<a href="1.html">Un peu d'histoire</a>
-          <br>
-        	<a href="2.html">L'effet papillon</a>
-          <br>
-          <a href="3.html">Les équations de Lorenz</a>
-          <li>Les systèmes dynamiques</li>
-          <li>Notre système multi-agents</li>
-    	  </ol>
-        <li>Partie graphique :</li>
-        <li>Sources</li>
-      </ul>
-    </div>
+    <?php include("menu.php"); ?>
     <br>
     <br>
     <div id="header">
-      Sources
+      Simulation de particules dans un univers chaotique.
+      <br>
+      1. La théorie du chaos
+      <br>
+      1.3 Les équations de Lorez
     </div>
     <div id="contenu">
-      Image de papillon : http://fr.torange.biz/24643.html
+      Comme nous l'avons vu précédemment, Lorenz s'est servi d'équations simplifiées pour découvrir la théorie du chaos. Les équations qu'il a utilisées (avant de les simplifier) sont les équations aux dérivées partielles couplées de Navier-Stokes. Elles représentent mathématiquement le couplage de l'atmosphère avec l'océan. Son but était d'étudier le phénomène de convection de Rayleigh-Bénard.
+
+      <h1>Partie à faire quand on maitrisera PHP !!!</h1>
     </div>
-  </body>
-</html>
+</html

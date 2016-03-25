@@ -4,27 +4,11 @@
   	<meta http-equiv="content-type" content="text/html;charset=UTF-8">
     <title>La théorie du chaos</title>
     <meta name="Author" content="BLAIS Claire, RENTCHLER Marianne">
-    <link rel="stylesheet" type="text/css" href="1.css">   
+    <link rel="stylesheet" type="text/css" href="site.css">   
   </head>
   <body>
     <img src="lorenz.jpg" alt="Une photo"></img>
-    <div id="menu">
-      Menu 
-      <ul>
-        <li>Partie explicative :</li>
-        <ol>
-          <li>La théorie du chaos</li>
-          <a href="1.html">Un peu d'histoire</a>
-          <br>
-          <a href="2.html">L'effet papillon</a>
-          <br>
-          <a href="3.html">Les équations de Lorenz</a>
-          <li>Les systèmes dynamiques</li>
-          <li>Notre système multi-agents</li>
-        </ol>
-        <li>Partie graphique :</li>
-        <li>Sources</li>
-      </ul>
+    <?php include("menu.php"); ?>
     </div>
     <br>
     <br>
