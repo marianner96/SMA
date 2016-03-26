@@ -10,7 +10,7 @@
 
   <body>
     <img src="lorenz.jpg" alt="Une photo"></img>
-    <?php include("menus.php"); ?>
+    <?php include("menu.php"); ?>
     <br>
     <br>
     <div id="header">
