@@ -39,4 +39,36 @@ tailleo: nombre objet
 let creamap taillea tailleo = ((creagent [] taillea), (creaobjet [] tailleo));;
 
 
+(*---------------------------------------------------------------------------------------------------------------*)
+(*------------------------------------Résolution des équations de Lorenz------------------------------------------*)
+(*------------------------------------Méthode de résolution: RUNGE-KUTTA ordre 4----------------------------------*)
+(*---------------------------------------------------------------------------------------------------------------*)
 
+(*-----calcule de dx/dt=f----------*)
+let f x y = 10.*.(y-.x);;
+(*-----calcule de dy/dt=g ----------*)
+let g x y z = 28.*.x-.y-.x*.z;;
+(*-----calcule de dz/dt=h ----------*)
+let h y z =28.*.y-.(8./.3.)*.z;;
+
+
+(*-----Calcule des coordonnés X Y Z -----------------*)
+(*date: 04/04/16
+  x y z: coordonné initiale de l'agent
+  acc: nombre d'iteration du calcul de x y et z
+  0.001: gamma: le pas*)
+let rec calculcoor x y z acc= match acc with
+ 0 -> {x;y;z}
+| _ ->  let a1=0.001*.(f x y) in
+		let a2=0.001*.(f (x+.(a1/.2.)) (y+.(a1/.2.))) in
+		let a3=0.001*.(f (x+.(a2/.2.)) (y+.(a2/.2.))) in
+		let a4=0.001*.(f (x+.a3) (y+.a3)) in
+		let b1=0.001*.(g x y z) in
+		let b2=0.001*.(g (x+.(b1/.2.)) (y+.(b1/.2.)) (z+.(b1/.2.))) in
+		let b3=0.001*.(g (x+.(b2/.2.)) (y+.(b2/.2.)) (z+.(b2/.2.))) in
+		let b4=0.001*.(g (x+.b3) (y+.b3) (z+.b3))in
+		let c1=0.001*.(h y z)in
+		let c2=0.001*.(h (y+.(c1/.2.)) (z+.(c1/.2.)))in
+		let c3=0.001*.(h (y+.(c2/.2.)) (z+.(c2/.2.)))in
+		let c4=0.001*.(h (y+.c3) (z+.c3))in
+		calculcoor (x+.a1+.2.*.a2+.2.*.a3+.a4) (y+.b1+.2.*.b2+.2.*.b3+.b4) (z+.c1+.2.*.c2+.2.*.c3+.c4) (acc-1);;(*c'est ici que l'on peut récupérer les coordonnés a chaque itération*)
