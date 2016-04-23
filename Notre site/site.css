@@ -1,0 +1,56 @@
+body {
+	margin:0; 
+	padding:0;
+	color:#65625B; 
+	background:#fff url(main2_bg.gif);
+}
+
+img{
+	margin-top: 2.2%;
+	height: 100%;
+	width: 18%;
+	float: left;
+}
+
+a {
+	color : #65625B;
+}
+
+#headr{
+	font-size: 26px;
+	font-weight: bold;
+	text-align: center;
+	color: #CD5C5C;
+
+}
+
+#introduction {
+	height: 200px;
+	width: 850px;
+	font-size: 16px;
+	font-weight: normal;
+	margin-left: 19%;
+}
+
+#introduction:first-letter {
+	font-style: italic;
+	font-size: 40px;
+}
+
+#menu {
+	float: right;
+	width : 250px;
+	height: 400px;
+	background-color: beige;
+	margin-top: 2.2%;
+	border-style: solid;
+	text-align: center;
+}
+
+ul {
+	text-align: left;
+}
+
+ol {
+	text-align: left;
+}

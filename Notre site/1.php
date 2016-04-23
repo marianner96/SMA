@@ -4,22 +4,29 @@
   	<meta http-equiv="content-type" content="text/html;charset=UTF-8">
     <title>La théorie du chaos</title>
     <meta name="Author" content="BLAIS Claire, RENTCHLER Marianne">
-    <link rel="stylesheet" type="text/css" href="site.css">   
+    <link rel="stylesheet" type="text/css" href="site.css"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+    <link rel="stylesheet" href="Template accueil/assets/css/main.css" />
+    <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->  
   </head>
   <body>
-    <img src="lorenz.jpg" alt="Une photo"></img>
-    <?php include("menu.php"); ?>
-    </div>
-    <br>
-    <br>
-    <div id="header">
-      Simulation de particules dans un univers chaotique.
+            <div id="header-wrapper">
+          <div id="header" class="container">
+    <?php include("Template accueil/menu.php"); ?>
+
+          </div>
+        </div>
+    <div id="headr">
+      Simulation de particules dans un univers chaotique  
       <br>
       1. La théorie du chaos
       <br>
       1.1 Un peu d'histoire
     </div>
-    <div id="contenu">
+
+    <img src="lorenz.jpg" alt="Une photo"></img>
+    <div class="container">
     Pour certains physiciens, le XX eme siècle se résume en trois découvertes majeures : la relativité, la mécanique quantique et le chaos. La théorie de la relativité faite par Einstein a fait changer les croyances des physiciens à propos de l’espace et du temps, et la mécanique quantique a démontré la théorie de Newton selon laquelle tout était mesurable. La théorie du chaos a quant à elle démontré qu’on ne peut pas tout prévoir.
     <br>
     <br>
@@ -34,4 +41,13 @@
 	<br>
 	Grâce à la courbe d'évolution des deux résultats, il remarqua que, si les premières valeurs se ressemblaient, ensuite les courbes divergeaient. Cependant ce n'était pas une divergence quelconque, cela ressemblait à des ailes de papillons déployées. Il eu beau refaire les équations de nombreuses fois, il eu toujours le même résultat. Il décide d'appeler sa découverte les attracteurs étranges.
     </div>
+        <!-- Scripts -->
+      <script src="Template accueil/assets/js/jquery.min.js"></script>
+      <script src="Template accueil/assets/js/jquery.dropotron.min.js"></script>
+      <script src="Template accueil/assets/js/skel.min.js"></script>
+      <script src="Template accueil/assets/js/skel-viewport.min.js"></script>
+      <script src="Template accueil/assets/js/util.js"></script>
+      <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+      <script src="Template accueil/assets/js/main.js"></script>
+  </body>
 </html>
