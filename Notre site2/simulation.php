@@ -9,11 +9,12 @@
     <meta name="description"  content="paramètres de boutons" >
     <meta name="robots"  content="index,follow" >
     <meta name="Author" content="BLAIS Claire, RENTCHLER Marianne">
-    <link rel="stylesheet" type="text/css" href="site.css">  
-    <link rel="stylesheet" href="assets/css/main.css" />   
+    <link rel="stylesheet" type="text/css" href="site.css">
+    <link rel="stylesheet" href="assets/css/main.css" />  
+    <meta name="viewport" content="width=device-width, initial-scale=1" /> 
     <title>La théorie du chaos</title>
   </head>
-
+  
   <body class="no-sidebar">
 
     <div id="header-wrapper">
@@ -25,17 +26,6 @@
     </div>
 
 
-    <img src="images/lorenz.jpg" alt="Une photo"></img>
-
-
-    <div id="headr">
-       Sources
-    </div>  
-
-
-    <div id="contenu">
-      Image de papillon : http://fr.torange.biz/24643.html
-    </div>
 
     <!-- Scripts -->
       <script src="assets/js/jquery.min.js"></script>
@@ -45,5 +35,5 @@
       <script src="assets/js/util.js"></script>
       <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
       <script src="assets/js/main.js"></script>
-  </body>
-</html>
+  </html>
+</body>
