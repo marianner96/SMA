@@ -34,7 +34,9 @@
 
 
     <div id="contenu">
-      Image de papillon : http://fr.torange.biz/24643.html
+      site sur les équations de Navier-Stokes : https://sciencetonnante.wordpress.com/2014/03/03/la-mysterieuse-equation-de-navier-stokes/
+      <br>
+      couplage atmosphere ocean : http://www.cnrs.fr/cw/dossiers/dosclim1/rechfran/4theme/variaclima/encartsemaphore.html
     </div>
 
     <!-- Scripts -->
