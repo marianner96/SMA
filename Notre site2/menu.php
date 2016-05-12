@@ -1,6 +1,6 @@
 <nav id="nav">
 	<ul>
-		<li><a class="icon fa-home" href="accueil.php"><span>Accueil</span></a></li>
+		<li><a href="accueil.php"><span><span class="glyphicon glyphicon-home"></span> Accueil</span></a></li>
 		<li><a class="icon fa-bars" href="#"><span>Explications</span></a>
 			<ul>
 				<li><a href="#">La théorie du chaos</a>

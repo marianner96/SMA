@@ -1,8 +1,12 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
   <head >
-  	<meta http-equiv="content-type" content="text/html;charset=UTF-8">
     <title>La théorie du chaos</title>
+  	<meta http-equiv="content-type" content="text/html;charset=UTF-8">
+    <meta name="publisher"  content="EISTI" >
+    <meta name="copyright"  content="EISTI" >
+    <meta name="date-creation-yyyymmdd"  content="20160215" >
+    <meta name="reply-to"  content="rentchlerm@eisti.eu, blaisclair@eisti.eu" >
     <meta name="Author" content="BLAIS Claire, RENTCHLER Marianne">
     <link rel="stylesheet" type="text/css" href="site.css"> 
     <meta name="viewport" content="width=device-width, initial-scale=1" />

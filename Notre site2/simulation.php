@@ -25,7 +25,10 @@
       </div>
     </div>
 
-
+    <div class="container">
+      Voici une simulation de la théorie du chaos à l'aide des équations de Lorenz. Vous aller pouvoir faire varier trois paramètres pour voir leur influence sur le
+      résultat final.
+    </div>
 
     <!-- Scripts -->
       <script src="assets/js/jquery.min.js"></script>
@@ -34,6 +37,6 @@
       <script src="assets/js/skel-viewport.min.js"></script>
       <script src="assets/js/util.js"></script>
       <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
-      <script src="assets/js/main.js"></script>
+      <script src="assets/js/main.js"></script> 
   </html>
 </body>

@@ -34,7 +34,7 @@
     </div>
 
 
-    <div id="container">
+    <div class="container">
 
         <div class="text">
           Henri Poincaré travailla sur des phénomènes chaotiques, et il constata que le déterminisme absolu ne reflète qu’un état particulier du 
