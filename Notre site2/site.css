@@ -46,3 +46,8 @@ ul.liste {
 	list-style-type: circle;
 	margin-left: 3%;
 }
+.loi{
+	font-weight: bold;
+	color: #787878;
+	margin-bottom: 3px;
+}

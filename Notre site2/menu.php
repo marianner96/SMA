@@ -10,7 +10,13 @@
 						<li><a href="equations.php">Equations de Lorenz</a></li>
 					</ul>
 				</li>
-				<li><a href="#">Les systèmes dynamiques</a></li>
+				<li><a href="#">Les systèmes dynamiques</a>
+					<ul>
+						<li><a href="systdyna.php">Présentation	</a></li>
+						<li><a href="systmod.php">Modèle de système</a></li>
+						<li><a href=""></a></li>
+					</ul>
+				</li>
 				<li><a href="#">Notre système multi-agents</a></li>
 			</ul>
 		</li>
