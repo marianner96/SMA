@@ -25,7 +25,17 @@
       </div>
     </div>
 
+    <div class="container" id="explication">
+      Vous allez maintenant pouvoir voir comment marche notre système multi-agents. Il suffit de modifier les différents trucs 
+      modifiables et laissez le programme faire le reste ! 
+    </div>
+    <img src="images/chaos.png" alt="chaos" id="chaos"></img>
 
+    <div class="text">
+      <form name="simulation" id="for">
+        <input type="button" class="btn btn-primary" value="Coucou">
+      </form>
+    </div>
 
     <!-- Scripts -->
       <script src="assets/js/jquery.min.js"></script>
