@@ -13,7 +13,7 @@ let nvagent = { ca= randomca; intensite= (Random.float 10.)};;
 (*liste d'agent*)
 let rec creagent listeagent acc= match acc with
 0 -> listeagent
-| _ -> creagent ([nvagent]::listeagent) (acc-1);;
+| _ -> creagent ([nvagent]@listeagent) (acc-1);;
 (*creation objet
 date: 11/03/16-----------------------------------------------------------*)
 (*coordonnées agent*)
@@ -23,7 +23,7 @@ let nvobjet ={co= randomco; etat= "inactif"; periodicite= 0.};;
 (*liste objet*)
 let rec creaobjet listeobjet acc= match acc with
 0 -> listeobjet
-| _ -> creaobjet ([nvobjet]::listeobjet) (acc-1);;
+| _ -> creaobjet ([nvobjet]@listeobjet) (acc-1);;
 (*creation de la map
 date: 11/03/16
 taillea :nombre agent
@@ -75,10 +75,24 @@ let remplacecoor agent coor = agent ={x= List.nth coor 0; y= List.nth coor 1; z=
 let rec evountour listeagent acc= match acc with
 | [] -> acc;
 | a::b -> evountour b acc@[{ca= (remplacecoor a.ca (calculcoor (a.ca.x) (a.ca.y) (a.ca.z))); intensite=a.intensite}] ;;
+
+(*-------------------------------------*)
+let rec ecrilist liste = match liste with
+| []-> (print_string " FIN ")
+| a::b -> (print_endline ((string_of_float a.ca.x)^" ; "^(string_of_float a.ca.y)^" ; "^(string_of_float a.ca.z)));
+			(ecrilist b);;
+
 (*date: 20/05/16
- *) 
+listeagent: la liste des agents
+nbevo : le nombre de tours d'évolution que suivent les agents *) 
 let evolution listeagent nbevo= 
 		for i = 1 to nbevo do
-			(*la liste qu'il faudra ecrire sur le fichier*)(evountour listeagent []);
+			(*la liste qu'il faudra ecrire sur le fichier*)(ecrilist (evountour listeagent []));
 		done;;
 
+
+(*fonction d'appel du prog
+date: 30/05/16
+*)
+let appel nbagent nbobjet nbevo =
+	evolution (fst (creamap nbagent nbobjet)) nbevo;;
