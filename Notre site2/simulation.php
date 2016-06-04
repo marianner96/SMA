@@ -9,9 +9,14 @@
     <meta name="description"  content="paramètres de boutons" >
     <meta name="robots"  content="index,follow" >
     <meta name="Author" content="BLAIS Claire, RENTCHLER Marianne">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="site.css">
     <link rel="stylesheet" href="assets/css/main.css" />  
     <meta name="viewport" content="width=device-width, initial-scale=1" /> 
+    <script src="assets/js/sma.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <title>La théorie du chaos</title>
   </head>
   
@@ -26,16 +31,38 @@
     </div>
 
     <div class="container" id="explication">
-      Vous allez maintenant pouvoir voir comment marche notre système multi-agents. Il suffit de modifier les différents trucs 
-      modifiables et laissez le programme faire le reste ! 
+      Vous allez maintenant pouvoir voir comment marche notre système multi-agents. Il suffit de choisir le nombre d'agents, d'évolutions et d'objets
+       et laissez le programme faire le reste ! 
     </div>
     <img src="images/chaos.png" alt="chaos" id="chaos"></img>
 
-    <div class="text">
-      <form name="simulation" id="for">
-        <input type="button" class="btn btn-primary" value="Coucou">
+    <div id="form">
+      <form name="simulation" class="form-inline" id="val">
+        <div class="form-group">
+          <label>
+            Nombres d'agents
+            <input type="text" id="nbagents" value="">
+          </label>
+        </div>
+
+        <div class="form-group">
+          <label>
+            Nombres d'objets
+            <input type="text"id="nbobjets" value="">
+          </label>
+        </div>
+
+        <div class="form-group">
+          <label>
+            Nombres d'évolution
+            <input type="text" id="nbevo" value="">
+          </label>
+        </div>
+
+        <input type="button" name="ok" value="Valider" onclick="lancer()">
       </form>
     </div>
+
 
     <!-- Scripts -->
       <script src="assets/js/jquery.min.js"></script>

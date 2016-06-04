@@ -17,7 +17,7 @@
 						<li><a href=""></a></li>
 					</ul>
 				</li>
-				<li><a href="#">Notre système multi-agents</a></li>
+				<li><a href="sma.php">Notre système multi-agents</a></li>
 			</ul>
 		</li>
 		<li><a class="icon fa-bar-chart-o" href="simulation.php"><span>Simulation</span></a></li>

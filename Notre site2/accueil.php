@@ -8,6 +8,13 @@
 	<head>
 		<title>Théorie du chaos</title>
 		<meta charset="utf-8" />
+		 <meta name="publisher"  content="EISTI" >
+	    <meta name="copyright"  content="EISTI" >
+	    <meta name="date-creation-yyyymmdd"  content="20160215" >
+	    <meta name="reply-to"  content="rentchlerm@eisti.eu, blaisclair@eisti.eu" >
+	    <meta name="description"  content="paramètres de boutons" >
+	    <meta name="robots"  content="index,follow" >
+	    <meta name="Author" content="BLAIS Claire, RENTCHLER Marianne">
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
