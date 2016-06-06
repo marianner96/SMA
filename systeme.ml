@@ -98,12 +98,18 @@ let appel nbagent nbobjet nbevo =
 
 (*fonction d'écriture
 date: 06/06/16*)
+let rec ecris liste fichier=
+match liste with
+| []-> output_string fichier ("\n");
+| a::b -> (output_string fichier ((string_of_float a.ca.x)^"\n"^(string_of_float a.ca.y)^"\n"^(string_of_float a.ca.z)^"\n")); 
+		(ecris b fichier);;
 
-let rec evoluer listeagent nbevo =
-let fichier= open_out "resultats.txt";;
-output_string fichier 
+let rec evoluer listeagent nbevo fichier=
  match nbevo with
-			| 1-> print_string("tours numéro");
-				print_int(nbevo-1);print_string("  :  ");
-				(ecrilist (evountour listeagent []));
-			| _ -> evolution (evountour listeagent []) (nbevo-1);;
+			| 0-> (ecris listeagent fichier); 
+			| _ ->(ecris listeagent fichier); (evoluer (evountour listeagent []) (nbevo-1) fichier);;
+
+let appelfich nbagent nbobjet nbevo =
+	let fichier= open_out "resultats.txt" in 
+	evoluer (fst (creamap nbagent nbobjet)) nbevo fichier;
+	(close_out fichier);;
