@@ -6,24 +6,18 @@ Il y avait un valeur pour l'objet ???*)
 type objet = {co: coordonnes; etat : string; periodicite : float};;
 (*creation agent
 date: 11/03/16---------------------------------------------------*)
-(*coordonnées agent*)
-let randomca = {x= Random.float 10.; y= Random.float 10.; z= Random.float 10.};;
-(*agent*)
-let nvagent = { ca= randomca; intensite= (Random.float 10.)};;
+
 (*liste d'agent*)
 let rec creagent listeagent acc= match acc with
 0 -> listeagent
-| _ -> creagent ([nvagent]@listeagent) (acc-1);;
+| _ -> creagent ([{ ca= {x= Random.float 10.; y= Random.float 10.; z= Random.float 10.}; intensite= (Random.float 10.)}]@listeagent) (acc-1);;
 (*creation objet
 date: 11/03/16-----------------------------------------------------------*)
-(*coordonnées agent*)
-let randomco = {x= Random.float 10.; y= Random.float 10.; z= Random.float 10.};;
-(**creation objet*)
-let nvobjet ={co= randomco; etat= "inactif"; periodicite= 0.};;
+
 (*liste objet*)
 let rec creaobjet listeobjet acc= match acc with
 0 -> listeobjet
-| _ -> creaobjet ([nvobjet]@listeobjet) (acc-1);;
+| _ -> creaobjet ([{co=  {x= Random.float 10.; y= Random.float 10.; z= Random.float 10.}; etat= "inactif"; periodicite= 0.}]@listeobjet) (acc-1);;
 (*creation de la map
 date: 11/03/16
 taillea :nombre agent
@@ -62,19 +56,9 @@ let rec calculcoor x y z = let a1=0.001*.(f x y) in
  let c2=0.001*.(h (y+.(c1/.2.)) (z+.(c1/.2.)))in
  let c3=0.001*.(h (y+.(c2/.2.)) (z+.(c2/.2.)))in
  let c4=0.001*.(h (y+.c3) (z+.c3))in
-  [(x+.a1+.2.*.a2+.2.*.a3+.a4);(y+.b1+.2.*.b2+.2.*.b3+.b4);(z+.c1+.2.*.c2+.2.*.c3+.c4)];;(*c'est ici que l'on peut récupérer les coordonnés a chaque itération*)
+  {x=(x+.a1+.2.*.a2+.2.*.a3+.a4);y=(y+.b1+.2.*.b2+.2.*.b3+.b4);z=(z+.c1+.2.*.c2+.2.*.c3+.c4)};;(*c'est ici que l'on peut récupérer les coordonnés a chaque itération*)
 
  (*---------------Evolution des agents-----------------*)
- (*date: 20/05/16
- *)
-let remplacecoor agent coor = agent ={x= List.nth coor 0; y= List.nth coor 1; z=List.nth coor 2};
-								agent;;
-
- (*date: 20/05/16
- *)
-let rec evountour listeagent acc= match acc with
-| [] -> acc;
-| a::b -> evountour b acc@[{ca= (remplacecoor a.ca (calculcoor (a.ca.x) (a.ca.y) (a.ca.z))); intensite=a.intensite}] ;;
 
 (*-------------------------------------*)
 let rec ecrilist liste = match liste with
@@ -82,13 +66,26 @@ let rec ecrilist liste = match liste with
 | a::b -> (print_endline ((string_of_float a.ca.x)^" ; "^(string_of_float a.ca.y)^" ; "^(string_of_float a.ca.z)));
 			(ecrilist b);;
 
+ (*date: 20/05/16
+ *)
+let rec evountour listeagent acc= match listeagent with
+| [] -> acc;
+| a::b -> evountour b (acc@[{ca= (calculcoor (a.ca.x) (a.ca.y) (a.ca.z)); intensite=a.intensite}]) ;;
+
+
 (*date: 20/05/16
 listeagent: la liste des agents
 nbevo : le nombre de tours d'évolution que suivent les agents *) 
-let evolution listeagent nbevo= 
-		for i = 1 to nbevo do
-			(*la liste qu'il faudra ecrire sur le fichier*)(ecrilist (evountour listeagent []));
-		done;;
+let rec evolution listeagent nbevo= 
+print_string("tours numéro");
+print_int(nbevo);print_string("  :  ");
+ecrilist listeagent;
+match nbevo with
+			| 1-> print_string("tours numéro");
+				print_int(nbevo-1);print_string("  :  ");
+				(ecrilist (evountour listeagent []));
+			| _ -> evolution (evountour listeagent []) (nbevo-1);;	(*la liste qu'il faudra ecrire sur le fichier*)
+			
 
 
 (*fonction d'appel du prog
@@ -96,3 +93,17 @@ date: 30/05/16
 *)
 let appel nbagent nbobjet nbevo =
 	evolution (fst (creamap nbagent nbobjet)) nbevo;;
+
+(*-------------------Ecrire dans le fichier----------------------------*)
+
+(*fonction d'écriture
+date: 06/06/16*)
+
+let rec evoluer listeagent nbevo =
+let fichier= open_out "resultats.txt";;
+output_string fichier 
+ match nbevo with
+			| 1-> print_string("tours numéro");
+				print_int(nbevo-1);print_string("  :  ");
+				(ecrilist (evountour listeagent []));
+			| _ -> evolution (evountour listeagent []) (nbevo-1);;
