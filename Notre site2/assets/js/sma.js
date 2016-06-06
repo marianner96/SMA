@@ -16,15 +16,16 @@ function getXhr(){
     return xhr ;
 }
 
-function simu () {
+function lancer () {
 	xhr = getXhr();
     nbagents = document.forms.val.nbagents.value;
-    alert(nbagents);
+    nbobjets = document.forms.val.nbobjets.value;
+    nbevo = document.forms.val.nbevo.value;
     xhr.onreadystatechange = function () {
         if (xhr.readyState ==4 && xhr.status == 200) {
-            document.getElementById("form").innerHTML = xhr.responseText;
+            document.getElementById("graphique").innerHTML = xhr.responseText;
         };
     }
-    xhr.open("GET", "af.php?fic=famille.txt", true);
+    xhr.open("GET", "faisgraphique.php?nbagents=" + nbagents + "&nbobjets=" + nbobjets + "&nbevo=" + nbevo, true);
     xhr.send();
 }

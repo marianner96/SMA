@@ -41,27 +41,28 @@
         <div class="form-group">
           <label>
             Nombres d'agents
-            <input type="text" id="nbagents" value="">
+            <input type="number" name="nbagents" min="1" max="100">
           </label>
         </div>
 
         <div class="form-group">
           <label>
             Nombres d'objets
-            <input type="text"id="nbobjets" value="">
+            <input type="number" name="nbobjets" min="1" max="100">
           </label>
         </div>
 
         <div class="form-group">
           <label>
             Nombres d'évolution
-            <input type="text" id="nbevo" value="">
+            <input type="number" name="nbevo" min="1" max="100">
           </label>
         </div>
 
         <input type="button" name="ok" value="Valider" onclick="lancer()">
       </form>
     </div>
+    <div id="graphique"></div>
 
 
     <!-- Scripts -->
