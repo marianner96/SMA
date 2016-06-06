@@ -6,8 +6,13 @@
 	fputs($fichier, 'nbagents = '.$nbagents."\n");
 	fputs($fichier, 'nbobjets = '.$nbobjets."\n");
 	fputs($fichier, 'nbevo = '.$nbevo."\n");
-	$command = 'ocaml #use "exemple.ml";;';
+	/*$command = 'ocaml #use "exemple.ml";;';
 	$result = shell_exec($command);
 	$out = explode("\n", $result);
-	var_dump($out) ;
+	var_dump($out) ;*/
+	echo "Hey";
+
+
+	// affichage de données 
+
 ?>
