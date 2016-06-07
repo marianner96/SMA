@@ -113,3 +113,5 @@ let appelfich nbagent nbobjet nbevo =
 	let fichier= open_out "resultats.txt" in 
 	evoluer (fst (creamap nbagent nbobjet)) nbevo fichier;
 	(close_out fichier);;
+
+appelfich 3 3 3;;

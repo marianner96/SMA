@@ -17,7 +17,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" /> 
     <script src="assets/js/sma.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script type="text/javascript">
+  <!--  <script type="text/javascript">
       window.onload = function (argument) {
         var chart = new CanvasJS.Chart("chartContainer", {
           title:{
@@ -41,7 +41,7 @@
 
         chart.render();
       }
-  </script>
+  </script> -->
   <script type="text/javascript" src="http://canvasjs.com/assets/script/canvasjs.min.js"></script>
     <title>La théorie du chaos</title>
   </head>

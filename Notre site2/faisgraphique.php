@@ -6,11 +6,16 @@
 	fputs($fichier, 'nbagents = '.$nbagents."\n");
 	fputs($fichier, 'nbobjets = '.$nbobjets."\n");
 	fputs($fichier, 'nbevo = '.$nbevo."\n");
-	/*$command = 'ocaml #use "exemple.ml";;';
-	$result = shell_exec($command);
-	$out = explode("\n", $result);
-	var_dump($out) ;*/
-	echo "Hey";
+	$commande = "ocaml systeme.ml";
+	$param = array();
+	$status_exec ;
+	$resultat = exec($commande,$param,$status_exec);
+
+	echo $resultat." -- ".$status_exec."<br/>";
+	foreach ($param as $i) {
+	    echo $i;
+	    echo "<br/>";
+}
 
 
 	// affichage de données 
