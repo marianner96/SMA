@@ -17,31 +17,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" /> 
     <script src="assets/js/sma.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-  <!--  <script type="text/javascript">
-      window.onload = function (argument) {
-        var chart = new CanvasJS.Chart("chartContainer", {
-          title:{
-            text: "Fruits sold in First Quarter"              
-          },
-          data: [//array of dataSeries              
-            { //dataSeries object
 
-             /*** Change type "column" to "bar", "area", "line" or "pie"***/
-             type: "column",
-             dataPoints: [
-             { label: "banana", y: 18 },
-             { label: "orange", y: 29 },
-             { label: "apple", y: 40 },                                    
-             { label: "mango", y: 34 },
-             { label: "grape", y: 24 }
-             ]
-           }
-           ]
-         });
-
-        chart.render();
-      }
-  </script> -->
   <script type="text/javascript" src="http://canvasjs.com/assets/script/canvasjs.min.js"></script>
     <title>La théorie du chaos</title>
   </head>
@@ -67,25 +43,25 @@
         <div class="form-group">
           <label>
             Nombres d'agents
-            <input type="number" name="nbagents" min="1" max="100">
+            <input type="number" name="nbagents" min="1" max="100" id="nbagents">
           </label>
         </div>
 
         <div class="form-group">
           <label>
             Nombres d'objets
-            <input type="number" name="nbobjets" min="1" max="100">
+            <input type="number" name="nbobjets" min="1" max="100" id="nbobjets">
           </label>
         </div>
 
         <div class="form-group">
           <label>
             Nombres d'évolution
-            <input type="number" name="nbevo" min="1" max="100">
+            <input type="number" name="nbevo" min="1" max="100" id="nbevo">
           </label>
         </div>
 
-        <input type="button" name="ok" value="Valider" onclick="lancer()">
+        <input type="submit" name="val" value="Valider">
       </form>
     </div>
     <div id="graphique"></div>
@@ -101,5 +77,21 @@
       <script src="assets/js/util.js"></script>
       <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
       <script src="assets/js/main.js"></script>
+      <script>
+      $("#val").submit(function(event){
+        event.preventDefault();
+        nbagents = $('#nbagents').val();
+        nbobjets = $('#nbobjets').val();
+        nbevo = $('#nbevo').val();
+        $.ajax({
+          url : 'faisgraphique.php',
+          type : 'GET',
+          data : 'nbagents=' + nbagents + '&nbobjets=' + nbobjets + '&nbevo=' +nbevo,
+          success : function() {
+            alert('Hello');
+          }  
+        });
+      });
+      </script>
   </html>
 </body>
