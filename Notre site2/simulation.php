@@ -87,8 +87,9 @@
           url : 'faisgraphique.php',
           type : 'GET',
           data : 'nbagents=' + nbagents + '&nbobjets=' + nbobjets + '&nbevo=' +nbevo,
-          success : function() {
-            alert('Hello');
+          //dateType : "json",
+          success : function(response) {
+            alert(response);
           }  
         });
       });
