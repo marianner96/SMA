@@ -47,7 +47,7 @@
         <div class="form-group">
           <label>
             Nombres d'objets
-            <input type="number" name="nbobjets" min="1" max="100" id="nbobjets">
+            <input type="number" name="nbobjets" min="0" max="100" id="nbobjets">
           </label>
         </div>
 
@@ -86,18 +86,20 @@
           data : 'nbagents=' + nbagents + '&nbobjets=' + nbobjets + '&nbevo=' +nbevo,
           dateType : "json",
           success : function(response) {
-            var table = JSON.parse(response);
+            var table = Array.from(JSON.parse(response));
             var xtab = new Array;
             var ytab = new Array;
             var ztab = new Array;
-            var j = 0;
-            for (var i = 0; i < (nbagents*(nbevo+1)); i+2) {
-              xtab[j] = table[i];
-              ytab[j] = table[i+1];
-              ztab[j] = table[i+2];
-              j++
+            var k = 0;
+            for (var i = 0; i < table.length; i++) {
+              for (var j = 0; j < nbagents; j++) {
+                var coordonnees = table[i][j].split(";");
+                xtab[k] = coordonnees[0];
+                ytab[k] = coordonnees[1];
+                ztab[k] = coordonnees[2];
+                k++;
+              };   
             };
-            alert("Salut");
           }  
         });
       });
