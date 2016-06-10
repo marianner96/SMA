@@ -80,6 +80,9 @@
         nbagents = $('#nbagents').val();
         nbobjets = $('#nbobjets').val();
         nbevo = $('#nbevo').val();
+        var xtab = new Array;
+        var ytab = new Array;
+        var ztab = new Array;
         $.ajax({
           url : 'faisgraphique.php',
           type : 'GET',
@@ -87,9 +90,7 @@
           dateType : "json",
           success : function(response) {
             var table = Array.from(JSON.parse(response));
-            var xtab = new Array;
-            var ytab = new Array;
-            var ztab = new Array;
+            
             var k = 0;
             for (var i = 0; i < table.length; i++) {
               for (var j = 0; j < nbagents; j++) {
@@ -102,26 +103,43 @@
             };
           }  
         });
+        TESTER = document.getElementById('graphique');
+       trace1 ={x: xtab, y: ytab,z: ztab,
+         mode: 'markers',
+         marker: { size: 5,
+           line: { color: 'rgba(217, 217, 217, 0.14)',
+             width: 0.5},
+           opacity: 0.8},
+         type: 'scatter3d'};
+
+       var data = [trace1];
+       var layout = {margin: {
+           l: 0,
+           r: 0,
+           b: 0,
+           t: 0
+        }};
+      Plotly.newPlot(TESTER, data, layout);
       });
 
       //la courbeee
-      // TESTER = document.getElementById('graphique');
-      // trace1 ={x: [1, 2, 3, 4, 5], y: [1, 2, 4, 8, 16],z: [1, 2, 3, 1, 2],
-      //   mode: 'markers',
-      //   marker: { size: 5,
-      //     line: { color: 'rgba(217, 217, 217, 0.14)',
-      //       width: 0.5},
-      //     opacity: 0.8},
-      //   type: 'scatter3d'};
+       TESTER = document.getElementById('graphique');
+       trace1 ={x: [1, 2, 3, 4, 5], y: [1, 2, 4, 8, 16],z: [1, 2, 3, 1, 2],
+         mode: 'markers',
+         marker: { size: 5,
+           line: { color: 'rgba(217, 217, 217, 0.14)',
+             width: 0.5},
+           opacity: 0.8},
+         type: 'scatter3d'};
 
-      // var data = [trace1];
-      // var layout = {margin: {
-      //     l: 0,
-      //     r: 0,
-      //     b: 0,
-      //     t: 0
-      //   }};
-     // Plotly.newPlot(TESTER, data, layout);
+       var data = [trace1];
+       var layout = {margin: {
+           l: 0,
+           r: 0,
+           b: 0,
+           t: 0
+        }};
+      Plotly.newPlot(TESTER, data, layout);
   
 
   // Plotly.plot( TESTER, [{
