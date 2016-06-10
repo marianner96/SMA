@@ -86,31 +86,46 @@
           data : 'nbagents=' + nbagents + '&nbobjets=' + nbobjets + '&nbevo=' +nbevo,
           dateType : "json",
           success : function(response) {
-            alert(JSON.parse(response));
+            var table = JSON.parse(response);
+            var xtab = new Array;
+            var ytab = new Array;
+            var ztab = new Array;
+            var j = 0;
+            for (var i = 0; i < (nbagents*(nbevo+1)); i+2) {
+              xtab[j] = table[i];
+              ytab[j] = table[i+1];
+              ztab[j] = table[i+2];
+              j++
+            };
+            alert("Salut");
           }  
         });
-        nbtour = nbevo +1;
       });
 
       //la courbeee
-      TESTER = document.getElementById('graphique');
-      trace1 ={x: [1, 2, 3, 4, 5], y: [1, 2, 4, 8, 16],z: [1, 2, 3, 1, 2],
-        mode: 'markers',
-        marker: { size: 5,
-          line: { color: 'rgba(217, 217, 217, 0.14)',
-            width: 0.5},
-          opacity: 0.8},
-        type: 'scatter3d'};
+      // TESTER = document.getElementById('graphique');
+      // trace1 ={x: [1, 2, 3, 4, 5], y: [1, 2, 4, 8, 16],z: [1, 2, 3, 1, 2],
+      //   mode: 'markers',
+      //   marker: { size: 5,
+      //     line: { color: 'rgba(217, 217, 217, 0.14)',
+      //       width: 0.5},
+      //     opacity: 0.8},
+      //   type: 'scatter3d'};
 
-      var data = [trace1];
-      var layout = {margin: {
-          l: 0,
-          r: 0,
-          b: 0,
-          t: 0
-        }};
-      Plotly.newPlot(TESTER, data, layout);
+      // var data = [trace1];
+      // var layout = {margin: {
+      //     l: 0,
+      //     r: 0,
+      //     b: 0,
+      //     t: 0
+      //   }};
+     // Plotly.newPlot(TESTER, data, layout);
   
+
+  // Plotly.plot( TESTER, [{
+  // x: [1, 2, 3, 4, 5],
+  // y: [1, 2, 4, 8, 16],z: [1, 2, 3, 1, 2] }], {
+  // margin: { t: 0 } } );*/
       </script>
   </html>
 </body>
