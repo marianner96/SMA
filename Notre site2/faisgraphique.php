@@ -1,8 +1,13 @@
 <?php
 	function creertab ($depart, $nbagents, $f) {
 		$nbtour =array();
-		for ($i=$depart; $i <$depart+$nbagents+1 ; $i++) { 
-			$nbtour[$i] = fgets($f).";".fgets($f).";".fgets($f);
+		$debut = $depart%10;
+		$taille = ($depart+$nbagents)%10;
+		for ($i=$debut; $i <$taille ; $i++) { 
+			$pc = fgets($f);
+			$dc = fgets($f);
+			$tc = fgets($f);
+			$nbtour[$i] = $pc.";".$dc.";".$tc;
 		};
 		return $nbtour;
 	}
@@ -15,13 +20,12 @@
 	fclose($fichier);	
 	shell_exec("ocaml systeme.ml");
 	$f = fopen('resultats.txt', 'r');
-	$nblignes = (3*$nbagents+1)*($nbevo+1);
 	$evo = array();
 	$i = 1;
-	for ($j=0; $j <$nbevo+2 ; $j++) { 
+	for ($j=0; $j <$nbevo+1 ; $j++) { 
 		$evo[$j] = creertab($i-1, $nbagents, $f);
 		$lvide = fgets($f);
-		$i = (3*$i+1);
+		$i = $i + ($nbagents*3)+1;
 	};
 	fclose($f);
 	//echo json_encode($evo);

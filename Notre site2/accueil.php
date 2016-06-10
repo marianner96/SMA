@@ -43,12 +43,12 @@
 				<div id="main-wrapper">
 					<div id="main" class="container">
 						<div id="content" style="font-size:18px;">
-							Nous sommes deux élèves en classe préparatoire à l' EISTI Pau, ce site est notre projet de TIPE.
-							Ce site représente un projet sur deux sur la théorie du chaos. Sur la première année, nous avons réalisé
-							un rapport bibliographique sur cette théorie. Puis lors de la deuxième année, nous avons fait un poster 
-							scientifique, un cahier des charges pour l'application informatique que nous allions développer et enfin 
-							cette application informatique qui content un sysyème multi-agent dont le code (en OCaml) est disponible. 
-							Lors de la première année et du premier semestre de la deuxième année, nous étions 3.
+							Nous sommes deux élèves en classe préparatoire à l' EISTI Pau, ce site est notre projet
+							de TIPE. Ce site représente un projet sur deux sur la théorie du chaos. Sur la première 
+							année, nous avons réalisé un rapport bibliographique sur cette théorie. Puis lors de la 
+							deuxième année, nous avons fait un poster scientifique, un cahier des charges pour 
+							l'application informatique que nous allions développer et enfin cette application 
+							informatique qui content un sysyème multi-agent dont le code (en OCaml) est disponible. 
 						</div>
 					</div>
 				</div>
