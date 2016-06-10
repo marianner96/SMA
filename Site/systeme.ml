@@ -1,3 +1,4 @@
+#load "str.cma";;
 
 type coordonnes = {x : float; y :float; z : float};;
 type agent = {ca : coordonnes; intensite : float};;
@@ -110,8 +111,19 @@ let rec evoluer listeagent nbevo fichier=
 			| _ ->(ecris listeagent fichier); (evoluer (evountour listeagent []) (nbevo-1) fichier);;
 
 let appelfich nbagent nbobjet nbevo =
-	let fichier= open_out "resultats.txt" in 
-	evoluer (fst (creamap nbagent nbobjet)) nbevo fichier;
-	(close_out fichier);;
+	let fichierecriture= open_out "resultats.txt" in 
+	evoluer (fst (creamap nbagent nbobjet)) nbevo fichierecriture;
+	(close_out fichierecriture);;
 
-appelfich 3 3 3;;
+let transformer ligne = Str.split (Str.regexp ",") ligne ;;
+
+let lire flux = let ligne1=(input_line flux) in ligne1;;
+
+let lancer algolec =
+	let flec = open_in "parametres.txt" in
+	begin
+	 	let ligne = (transformer(algolec flec));
+	 	(appelfich (ligne.hd) (ligne.nth 1) (ligne.nth 2));
+	end;;
+
+lancer lire;;
