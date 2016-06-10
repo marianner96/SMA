@@ -101,11 +101,10 @@
                 k++;
               };   
             };
-          };
+          }
 
         });
-<<<<<<< HEAD
-=======
+
         TESTER = document.getElementById('graphique');
        trace1 ={x: xtab, y: ytab,z: ztab,
          mode: 'markers',
@@ -124,48 +123,7 @@
         }};
       Plotly.newPlot(TESTER, data, layout);
       });
->>>>>>> 3816503655950fe5697d204220d82a49f7ec06d5
 
-      });
-      //la courbeee
-<<<<<<< HEAD
-      TESTER = document.getElementById('graphique');
-      trace1 ={x: xtab, y: ytab,z: ztab,
-        mode: 'markers',
-        marker: { size: 5,
-          line: { color: 'rgba(217, 217, 217, 0.14)',
-            width: 0.5},
-          opacity: 0.8},
-        type: 'scatter3d'};
-=======
-       TESTER = document.getElementById('graphique');
-       trace1 ={x: [1, 2, 3, 4, 5], y: [1, 2, 4, 8, 16],z: [1, 2, 3, 1, 2],
-         mode: 'markers',
-         marker: { size: 5,
-           line: { color: 'rgba(217, 217, 217, 0.14)',
-             width: 0.5},
-           opacity: 0.8},
-         type: 'scatter3d'};
-
-       var data = [trace1];
-       var layout = {margin: {
-           l: 0,
-           r: 0,
-           b: 0,
-           t: 0
-        }};
-      Plotly.newPlot(TESTER, data, layout);
-  
->>>>>>> 3816503655950fe5697d204220d82a49f7ec06d5
-
-      var data = [trace1];
-      var layout = {margin: {
-          l: 0,
-          r: 0,
-          b: 0,
-          t: 0
-        }};
-     Plotly.newPlot(TESTER, data, layout);
       </script>
   </html>
 </body>
