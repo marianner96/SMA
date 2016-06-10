@@ -58,7 +58,7 @@
 						<div class="row">
 							<div class="4u 12u(mobile)">
 								<section>
-									<a href="theorie-du-chaos1.pdf" class="image featured">
+									<a href="PDF/theorie-du-chaos.pdf" class="image featured">
 										<img src="images/image3.jpg" width="100px;" height="150px;" alt></img>
 									</a>
 									<header>
@@ -69,7 +69,7 @@
 							</div>
 							<div class="4u 12u(mobile)">
 								<section>
-									<a href="theorie-du-chaos.pdf" class="image featured">
+									<a href="PDF/poster.pdf" class="image featured">
 										<img src="images/image.jpeg" width="100px;" height="150px;"  alt></img>
 									</a>
 									<header>
@@ -83,7 +83,7 @@
 							</div>
 							<div class="4u 12u(mobile)">
 								<section>
-									<a href="cahier-des-charges.pdf" class="image featured">
+									<a href="PDF/cahier-des-charges.pdf" class="image featured">
 										<img src="images/image2.jpg" width="100px;" height="150px;" alt></img>
 									</a>
 									<header>

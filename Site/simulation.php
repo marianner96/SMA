@@ -87,11 +87,12 @@
           url : 'faisgraphique.php',
           type : 'GET',
           data : 'nbagents=' + nbagents + '&nbobjets=' + nbobjets + '&nbevo=' +nbevo,
-          //dateType : "json",
+          dateType : "json",
           success : function(response) {
             alert(response);
           }  
         });
+        nbtour = nbevo +1;
       });
       </script>
   </html>

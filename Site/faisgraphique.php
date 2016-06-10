@@ -1,12 +1,18 @@
 <?php
+	/*
+	fonction creertab
+	Entree : $depart = ligne de depart, $nbagents = le nombre d'agents, $f le fichier ou il faut lire
+	Sortie : renvoie un tableau associatif avec les trois coordonnées de chaque agent pour une evolution
+	la fonction rtrim sert à enlever le '\n' qui apparait lors du passage en json
+	*/
 	function creertab ($depart, $nbagents, $f) {
 		$nbtour =array();
 		$debut = $depart%10;
 		$taille = ($depart+$nbagents)%10;
 		for ($i=$debut; $i <$taille ; $i++) { 
-			$pc = fgets($f);
-			$dc = fgets($f);
-			$tc = fgets($f);
+			$pc = rtrim(fgets($f));
+			$dc = rtrim(fgets($f));
+			$tc = rtrim(fgets($f));
 			$nbtour[$i] = $pc.";".$dc.";".$tc;
 		};
 		return $nbtour;
@@ -28,6 +34,6 @@
 		$i = $i + ($nbagents*3)+1;
 	};
 	fclose($f);
-	//echo json_encode($evo);
-	var_dump($evo);
+	echo json_encode($evo);
+	//var_dump($evo);
 ?>
