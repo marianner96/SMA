@@ -85,7 +85,7 @@
           data : 'nbagents=' + nbagents + '&nbobjets=' + nbobjets + '&nbevo=' +nbevo,
           dateType : "json",
           success : function(response) {
-            alert(response);
+            alert(JSON.parse(response));
           }  
         });
         nbtour = nbevo +1;
