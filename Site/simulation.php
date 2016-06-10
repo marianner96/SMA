@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="assets/plotly-latest.min.js"></script> <!--graph-->
     <link rel="stylesheet" type="text/css" href="site.css">
     <link rel="stylesheet" href="assets/css/main.css" />  
     <meta name="viewport" content="width=device-width, initial-scale=1" /> 
@@ -60,7 +61,7 @@
         <input type="submit" name="val" value="Valider">
       </form>
     </div>
-    <div id="graphique"></div>
+    <div id="graphique" style="width:600px;height:250px;"></div>
     <div id="chartContainer" style="height: 300px; width: 100%;">
   </div>
 
@@ -90,6 +91,34 @@
         });
         nbtour = nbevo +1;
       });
+
+      //la courbeee
+      TESTER = document.getElementById('graphique');
+      trace1 ={x: [1, 2, 3, 4, 5],
+  y: [1, 2, 4, 8, 16],z: [1, 2, 3, 1, 2],mode: 'markers',
+  marker: {
+    size: 5,
+    line: {
+      color: 'rgba(217, 217, 217, 0.14)',
+      width: 0.5
+    },
+    opacity: 0.8
+  },
+  type: 'scatter3d'
+};
+
+var data = [trace1];
+var layout = {margin: {
+    l: 0,
+    r: 0,
+    b: 0,
+    t: 0
+  }};
+Plotly.newPlot(TESTER, data, layout);
+  // Plotly.plot( TESTER, [{
+  // x: [1, 2, 3, 4, 5],
+  // y: [1, 2, 4, 8, 16],z: [1, 2, 3, 1, 2] }], {
+  // margin: { t: 0 } } );
       </script>
   </html>
 </body>
