@@ -70,6 +70,18 @@
         Transition vers le microniveau : Passage du macro au microniveau.</br>
         Augmentation de la dynamisation et du niveau de contrôlabilité : tendance à augmenter les organes de contrôle.
       </div>
+
+      <div class="text">
+        Des systèmes dynamiques non linéaires, ou simplement linéaires par morceau, peuvent faire preuve de comportements complètement imprévisibles, qui peuvent même sembler aléatoires, 
+        alors qu'il sont régis par des lois déterminées. Cette imprédictibilité est appelée chaos. 
+        On appelle la branche des systèmes dynamiques qui s'attache à définir clairement et à étudier le chaos : la théorie du chaos.</br>
+        Cette branche des mathématiques décrit qualitativement les comportements à long terme des systèmes dynamiques. Dans ce cadre, on ne met pas l'accent sur la recherche de solutions 
+        précises aux équations du système dynamique (ce qui, de toute façon, est souvent sans espoir), mais plutôt sur la réponse à des questions comme « Le système convergera-t-il vers un état stationnaire à long terme, 
+        et dans ce cas, quels sont les états stationnaires possibles ? » ou « Le comportement à long terme du système dépend-t-il des conditions initiales ? ».</br>
+        Un objectif important est la description des points fixes, ou états stationnaires, du système : ce sont les valeurs de la variable pour lesquelles elle n'évolue plus avec le temps. 
+        Certains de ces points fixes sont attractifs : ce qui veut dire que si le système parvient à leur voisinage, il va converger vers le point fixe.
+
+      </div>
     </div>
     <!-- Scripts -->
       <script src="assets/js/jquery.min.js"></script>

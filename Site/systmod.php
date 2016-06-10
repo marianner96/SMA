@@ -60,6 +60,19 @@
        <h1>Modèle chaotique</h1>
        Les systèmes chaotiques ont un comportement infiniment complexe. Ils sont irrésistiblement attirés par une figure géométrique de structure infiniment complexe sur laquelle ils semblent errer au hasard, mais sans jamais la quitter, ni repasser deux fois par le même point. Les attracteurs qui caractérisent ces systèmes, incluent à la fois des lois déterministes et des lois aléatoires, ce qui rend impossible toute prévision à long terme.
       </div>
+
+      <div class="text">
+        <h1>Les systèmes dynamiques et la théorie du chaos</h1>
+        Des systèmes dynamiques non linéaires, ou simplement linéaires par morceau, peuvent faire preuve de comportements complètement imprévisibles, qui peuvent même sembler aléatoires, 
+        alors qu'il sont régis par des lois déterminées. Cette imprédictibilité est appelée chaos. 
+        On appelle la branche des systèmes dynamiques qui s'attache à définir clairement et à étudier le chaos : la théorie du chaos.</br>
+        Cette branche des mathématiques décrit qualitativement les comportements à long terme des systèmes dynamiques. Dans ce cadre, on ne met pas l'accent sur la recherche de solutions 
+        précises aux équations du système dynamique (ce qui, de toute façon, est souvent sans espoir), mais plutôt sur la réponse à des questions comme « Le système convergera-t-il vers un état stationnaire à long terme, 
+        et dans ce cas, quels sont les états stationnaires possibles ? » ou « Le comportement à long terme du système dépend-t-il des conditions initiales ? ».</br>
+        Un objectif important est la description des points fixes, ou états stationnaires, du système : ce sont les valeurs de la variable pour lesquelles elle n'évolue plus avec le temps. 
+        Certains de ces points fixes sont attractifs : ce qui veut dire que si le système parvient à leur voisinage, il va converger vers le point fixe.
+
+      </div>
     </div>
     <!-- Scripts -->
       <script src="assets/js/jquery.min.js"></script>
