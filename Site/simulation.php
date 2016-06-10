@@ -80,9 +80,9 @@
         nbagents = $('#nbagents').val();
         nbobjets = $('#nbobjets').val();
         nbevo = $('#nbevo').val();
-        var xtab = new Array;
-        var ytab = new Array;
-        var ztab = new Array;
+         xtab = new Array;
+         ytab = new Array;
+         ztab = new Array;
         $.ajax({
           url : 'faisgraphique.php',
           type : 'GET',
@@ -101,10 +101,6 @@
                 k++;
               };   
             };
-          }
-
-        });
-
         TESTER = document.getElementById('graphique');
        trace1 ={x: xtab, y: ytab,z: ztab,
          mode: 'markers',
@@ -122,7 +118,10 @@
            t: 0
         }};
       Plotly.newPlot(TESTER, data, layout);
-      });
+          }
+
+        });
+       });
 
       </script>
   </html>
