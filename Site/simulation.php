@@ -89,7 +89,7 @@
           data : 'nbagents=' + nbagents + '&nbobjets=' + nbobjets + '&nbevo=' +nbevo,
           dateType : "json",
           success : function(response) {
-            var table = Array.from(JSON.parse(response));
+            table = Array.from(JSON.parse(response));
             
             var k = 0;
             for (var i = 0; i < table.length; i++) {

@@ -7,9 +7,7 @@
 	*/
 	function creertab ($depart, $nbagents, $f) {
 		$nbtour =array();
-		$debut = $depart%10;
-		$taille = ($depart+$nbagents)%10;
-		for ($i=$debut; $i <$taille ; $i++) { 
+		for ($i=$depart; $i <$nbagents ; $i++) { 
 			$pc = rtrim(fgets($f));
 			$dc = rtrim(fgets($f));
 			$tc = rtrim(fgets($f));
@@ -29,7 +27,7 @@
 	$evo = array();
 	$i = 1;
 	for ($j=0; $j <$nbevo+1 ; $j++) { 
-		$evo[$j] = creertab($i-1, $nbagents, $f);
+		$evo[$j] = creertab(0, $nbagents, $f);
 		$lvide = fgets($f);
 		$i = $i + ($nbagents*3)+1;
 	};

@@ -122,8 +122,8 @@ let lire flux = let ligne1=(input_line flux) in ligne1;;
 let lancer algolec =
 	let flec = open_in "parametres.txt" in
 	begin
-	 	let ligne = (transformer(algolec flec));
-	 	(appelfich (ligne.hd) (ligne.nth 1) (ligne.nth 2));
+	 	let ligne = (transformer(algolec flec)) in
+	 	(appelfich (int_of_string(List.hd ligne)) (int_of_string(List.nth ligne 1)) (int_of_string(List.nth ligne 2)));
 	end;;
 
 lancer lire;;
