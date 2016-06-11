@@ -47,7 +47,7 @@
         <div class="form-group">
           <label>
             Nombres d'objets
-            <input type="number" name="nbobjets" min="0" max="100" id="nbobjets">
+            <input type="number" name="nbobjets" min="0" max="10" id="nbobjets">
           </label>
         </div>
 
