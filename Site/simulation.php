@@ -104,7 +104,7 @@
         TESTER = document.getElementById('graphique');
        trace1 ={x: xtab, y: ytab,z: ztab,
          mode: 'markers',
-         marker: { size: 5,
+         marker: { size: 2,
            line: { color: 'rgba(217, 217, 217, 0.14)',
              width: 0.5},
            opacity: 0.8},
